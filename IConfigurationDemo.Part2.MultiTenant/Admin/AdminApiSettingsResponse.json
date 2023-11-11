@@ -1,0 +1,10 @@
+{
+  "LeedsCafe" : {
+    "Discount_Food_Enabled": "true",
+    "Discount_Food_Percent": "10"
+  },
+  "ManchesterCafe" : {
+    "Discount_Food_Enabled": "false",
+    "Discount_Food_Percent": "0"
+  }
+}
