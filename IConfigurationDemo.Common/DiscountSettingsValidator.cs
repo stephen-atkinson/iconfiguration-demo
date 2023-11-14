@@ -7,13 +7,15 @@ public class DiscountSettingsValidator : IValidateOptions<DiscountSettings>
 {
     public ValidateOptionsResult Validate(string? name, DiscountSettings options)
     {
-        string? failureMessage = null;
+        // New in .NET 8.0.
+        // Use ValidateOptionsResult.Fail() and ValidateOptionsResult.Success in earlier versions. 
+        var resultBuilder = new ValidateOptionsResultBuilder();
 
         if (options.Food.Percent is < 0 or > 100)
         {
-            failureMessage = $"{options.Food.Percent} doesn't match Range 0 - 100.";
+            resultBuilder.AddError($"{options.Food.Percent} doesn't match range 0 - 100.");
         }
 
-        return failureMessage != null ? ValidateOptionsResult.Fail(failureMessage) : ValidateOptionsResult.Success;
+        return resultBuilder.Build();
     }
 }

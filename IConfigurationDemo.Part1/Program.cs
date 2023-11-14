@@ -53,5 +53,10 @@ public static class Program
         Console.WriteLine($"Options - Food Discount Enabled: {options.Food.Enabled}");
         Console.WriteLine($"Options Snapshot - Food Discount Enabled: {optionsSnapshot.Food.Enabled}");
         Console.WriteLine($"Options Monitor - Food Discount Enabled: {optionsMonitor.Food.Enabled}");
+        
+        Console.WriteLine($"Food Discount Percent: {settings.Food.Percent}");
+        Console.WriteLine($"Options - Food Discount Percent: {options.Food.Percent}");
+        Console.WriteLine($"Options Snapshot - Food Discount Percent: {optionsSnapshot.Food.Percent}");
+        Console.WriteLine($"Options Monitor - Food Discount Percent: {optionsMonitor.Food.Percent}");
     }
 }
